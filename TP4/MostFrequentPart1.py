@@ -6,13 +6,13 @@ a = [2, 7, 5, 6, 7, 1, 6, 2, 1, 7, 6]
 while True:
     Total=0
     valtemp=0
-#   temp=L1
-#   temp.sort()
-#   temp.reverse()
-#   L1=a
-#   grandnombre=temp[0]
-#   print(L1)
-#   print(grandnombre)
+    temp=copy(L1)
+    temp.sort()
+    temp.reverse()
+    L1=a
+    grandnombre=temp[0]
+    print(L1)
+    print(grandnombre)
     for i in range(len(L1)-1):
         j=i+1
         if L1[i]==L1[j]:

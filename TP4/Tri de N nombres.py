@@ -1,4 +1,5 @@
 from random import *
+from copy import *
 while True:
     Ln=[]
     x=int(input("Longeure de votre liste: "))
@@ -6,10 +7,12 @@ while True:
 #       temp1=int(input(f"votre {i+1}e valleure: "))
         temp1 = randint(0,20)
         Ln.append(temp1)
+    Ln1=copy(Ln)
     print("votre liste: ", Ln)
-    print(sorted(Ln))
-    Ln.sort()
-    print("2e manière : ", Ln)
+    print("1e manière : ",sorted(Ln1))
+    Ln1.sort()
+    print("2e manière : ", Ln1)
+    print("3e manière : ")
     for i in range(x):
         for j in range(x):
             if Ln[i]<Ln[j]:
