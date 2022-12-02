@@ -1,14 +1,10 @@
 from copy import *
 chiff=[]
 appa=[]
-L1 = [2, 7, 5, 6, 7, 1, 6, 2, 1, 6, 7]
+L1 = [2, 7, 5, 6, 7, 1, 6, 2, 1, 6, 7,6,6]
 max = []
 while True:
-    cnt=0
-    L2=copy(L1)
-    L2.sort()
-    L2.reverse()
-    grn=L2[0]
+
     for i in range(len(L1)):
         test = 1
         for j in range(len(L1)):
