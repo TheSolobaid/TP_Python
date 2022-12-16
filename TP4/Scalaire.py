@@ -14,4 +14,4 @@ while True:
             V2.append(temp)
         for i in range(NmbrMax):
             scal=scal+(V1[i]*V2[i])
-        print("Le produit scalaire de v1 par v2 vaut 3 ",scal)
+        print("Le produit scalaire de v1 par v2 vaut ",scal)
