@@ -1,6 +1,6 @@
 while True:
     fact = 1
-    x=int(input("valeur a factorialiser"))
+    x=int(input("valeur a factorialiser "))
     n=input("quelle type de traitement? (‘while’ ou 'for')")
     i=0
     if n=="while" or n=="‘while’":
