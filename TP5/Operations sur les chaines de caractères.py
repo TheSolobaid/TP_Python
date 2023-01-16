@@ -19,4 +19,4 @@ while True:
             print(P2[0], P2[1])
             print(P1[0], P1[1])
         else:
-            print("ce sont les meme nom/prenoms")
+            print("ce sont les même nom/prenoms")
