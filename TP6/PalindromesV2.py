@@ -1,41 +1,48 @@
+
+
+def textcleaner(text):
+    str.lower(text)
+    
+
+    alpha = ""
+    for i in text:
+        if i.isalpha() :
+            alpha = alpha + i
+    return alpha
+
+
+def textreplace(text):
+    text = text.replace("é", "e")
+    text = text.replace("è", "e")
+    text = text.replace("ë", "e")               #replace pour le "e"
+    text = text.replace("ê", "e")               
+
+    text = text.replace("à", "a")
+    text = text.replace("â", "a")               #replace pour le "a"
+    text = text.replace("ä", "a")
+
+    text = text.replace("ç", "c")               #replace pour le "c"
+
+    text = text.replace("ù", "u")
+    text = text.replace("ü", "u")               #replace pour le "u"
+    text = text.replace("û", "u")
+
+    text = text.replace("ï", "i")               #replace pour le "i"
+
+    text = text.replace("ö", "o")               #replace pour le "o"
+    text = text.replace("ô", "o")
+
+    text = text.replace("ÿ", "y")               #replace pour le "y"
+
+    text = text.replace("ñ", "n")               #replace pour le "n"
+    return text
+
 while True:
-    test=0
+    test = 0
     mot=str(input("entrez un mot ou une phrase: "))
-    mot = mot.replace(",", "")
-    mot = mot.replace(";", "")
-    mot = mot.replace("/", "")
-    mot = mot.replace(" ", "")
-    mot = mot.replace("'", "")
-    mot = mot.replace("&", "")
-    mot = mot.replace("~", "")
-    mot = mot.replace("?", "")
-    mot = mot.replace("!", "")
-    mot = mot.replace('"', "")
-    mot = mot.replace("-", "")
-    mot = mot.replace("#", "")
-    mot = mot.replace("|", "")
-    mot = mot.replace("{", "")
-    mot = mot.replace("}", "")
-    mot = mot.replace("`", "")
-    mot = mot.replace("@", "a")
-    mot = mot.lower()
-    mot = mot.replace("é", "e")
-    mot = mot.replace("è", "e")
-    mot = mot.replace("ë", "e")
-    mot = mot.replace("ê", "e")
-    mot = mot.replace("à", "a")
-    mot = mot.replace("â", "a")
-    mot = mot.replace("ä", "a")
-    mot = mot.replace("ç", "c")
-    mot = mot.replace("ù", "u")
-    mot = mot.replace("ü", "u")
-    mot = mot.replace("û", "u")
-    mot = mot.replace("ï", "i")
-    mot = mot.replace("ö", "o")
-    mot = mot.replace("ÿ", "y")
-    mot = mot.replace("ñ", "n")
+    mot = str(textcleaner(mot))
+    mot = str(textreplace(mot))
     mot = mot.replace("", " ")
-    mot = mot.strip()
     m = (mot.split(" "))
     if len(m)%2 == 1:
         for i in range(len(m)):
